@@ -2,8 +2,18 @@ import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import { scroller } from 'react-scroll';
 
 const Sidedrawer = props => {
+   const scrollToElement = elements => {
+      scroller.scrollTo(elements, {
+         duration: 1500,
+         delay: 100,
+         smooth: true,
+         offset: -85
+      });
+      props.onClose(false);
+   };
    return (
       <Drawer
          anchor="right"
@@ -16,7 +26,7 @@ const Sidedrawer = props => {
             <ListItem
                button
                onClick={() => {
-                  console.log('featured');
+                  scrollToElement('Featured');
                }}
             >
                Event Starts In
@@ -24,7 +34,7 @@ const Sidedrawer = props => {
             <ListItem
                button
                onClick={() => {
-                  console.log('Venue Info');
+                  scrollToElement('VenuInfo');
                }}
             >
                Venu Info
@@ -32,7 +42,7 @@ const Sidedrawer = props => {
             <ListItem
                button
                onClick={() => {
-                  console.log('highlights');
+                  scrollToElement('Highlights');
                }}
             >
                Highlights
@@ -40,7 +50,7 @@ const Sidedrawer = props => {
             <ListItem
                button
                onClick={() => {
-                  console.log('pricing');
+                  scrollToElement('Pricing');
                }}
             >
                Pricing
@@ -48,7 +58,7 @@ const Sidedrawer = props => {
             <ListItem
                button
                onClick={() => {
-                  console.log('location');
+                  scrollToElement('Location');
                }}
             >
                Location
