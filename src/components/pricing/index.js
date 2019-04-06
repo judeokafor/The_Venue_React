@@ -11,6 +11,8 @@ export class Pricing extends Component {
          postions: ['Balcony', 'Medium', 'Star'],
          descriptions: [
             'Lorem text doesnt work for me here as a string',
+            'Lorem text doesnt work for me here as a string',
+            'Lorem text doesnt work for me here as a string',
             'But i will try to teype in some random text that should fill in these spaces',
             'I think these three spaces are enough, biko hand done tire me'
          ],
