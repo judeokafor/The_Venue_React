@@ -40,7 +40,7 @@ export class Header extends Component {
                   ? '#2f2f2f'
                   : 'transparent',
                boxShadow: 'none',
-               padding: '10px'
+               padding: '12px'
             }}
          >
             <ToolBar>
